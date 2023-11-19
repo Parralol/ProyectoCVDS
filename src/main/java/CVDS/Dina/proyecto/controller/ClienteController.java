@@ -5,6 +5,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -18,8 +19,13 @@ import CVDS.Dina.proyecto.service.ClienteService;
 @Controller
 public class ClienteController {
     
+    private Cliente cliente;
+
+    //private Restaurante restaurante;
+
     @Autowired
     ClienteService clienteService;
+
 
     @Autowired
     AlergiaService alergiaService;
@@ -41,8 +47,6 @@ public class ClienteController {
         }else{
             selectedList = request;
         }
-
-
         Cliente cliente = new Cliente(fname, lname);
         cliente.setNickname(nickname);
         cliente.setPassword(pass);
@@ -53,6 +57,7 @@ public class ClienteController {
         cliente.setCedula(cedula);
         cliente.setAlergias(allergies);
         cliente = clienteService.addCliente(cliente);
+        this.cliente = cliente;
         for(int i =0 ; i< selectedList.size(); i++ ){
             Alergia al = new Alergia(cliente, selectedList.get(i));
             allergies.add(al);
@@ -60,8 +65,24 @@ public class ClienteController {
         for(Alergia a: allergies){
             alergiaService.addAlergia(a);
         }
+        
+        return "redirect:/confirm";
+    }
+    @GetMapping("/confirm")
+    public String procesarFormulario( Model model) {
+        
+         model.addAttribute("cliente", cliente);
+        return "confirmacion";
+    }
+    @GetMapping("/CrearCliente")
+    public String subirDatos( ) {
 
+        return "/principal1";
+    }
 
+    @GetMapping("/ComenzarCero")
+    public String borrarDatos(){
+        clienteService.deleteCliente(cliente.getClienteid());
         return "creacion";
     }
 }

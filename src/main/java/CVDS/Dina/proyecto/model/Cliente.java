@@ -227,6 +227,18 @@ public class Cliente {
                 return false;
         } else if (!futurasComidas.equals(other.futurasComidas))
             return false;
+        if (tipoId == null) {
+            if (other.tipoId != null)
+                return false;
+        } else if (!tipoId.equals(other.tipoId))
+            return false;
+        if (cedula != other.cedula)
+            return false;
+        if (pedidos == null) {
+            if (other.pedidos != null)
+                return false;
+        } else if (!pedidos.equals(other.pedidos))
+            return false;
         if (alergias == null) {
             if (other.alergias != null)
                 return false;
@@ -251,6 +263,9 @@ public class Cliente {
         result = prime * result + ((comidaPreferidaDos == null) ? 0 : comidaPreferidaDos.hashCode());
         result = prime * result + ((comidaPreferidaTres == null) ? 0 : comidaPreferidaTres.hashCode());
         result = prime * result + ((futurasComidas == null) ? 0 : futurasComidas.hashCode());
+        result = prime * result + ((tipoId == null) ? 0 : tipoId.hashCode());
+        result = prime * result + cedula;
+        result = prime * result + ((pedidos == null) ? 0 : pedidos.hashCode());
         result = prime * result + ((alergias == null) ? 0 : alergias.hashCode());
         return result;
     }
