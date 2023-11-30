@@ -1,4 +1,0 @@
-# Cosas hechas
-
-   - ORM
-  
