@@ -11,62 +11,102 @@
         }
 
         .container {
-            width: 500px;
+            width: 100%;
             margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
         }
 
         h1 {
             text-align: center;
+            color: #e44d26; /* Naranja */
         }
 
         form {
-            width: 100%;
+            width: 400px;
             padding: 20px;
             border: 1px solid #ccc;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
         .form-group {
-            margin-bottom: 10px;
+            margin-bottom: 20px;
         }
 
         label {
             font-weight: bold;
+            color: #e44d26; /* Naranja */
         }
 
         input {
             width: 100%;
             padding: 10px;
             border-radius: 5px;
+            border: 1px solid #ccc;
         }
 
         button {
             width: 100%;
-            margin-top: 10px;
+            padding: 10px;
             border-radius: 5px;
             color: #fff;
-            background-color: #000;
+            background-color: #e44d26; /* Naranja */
+            border: 1px solid #e44d26; /* Naranja */
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #fff;
+            color: #e44d26; /* Naranja */
+        }
+
+        .image-container {
+            text-align: center;
+        }
+
+        img {
+            max-width: 100%;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        footer {
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #e44d26; /* Naranja */
+            color: white;
+            text-align: center;
+            border-radius: 10px;
         }
     </style>
 </head>
 <body>
 <div class="container">
-    <div class="row">
-        <div class="col-md-6 offset-md-3">
-            <h1 class="text-center">FoodieExpress</h1>
-            <form action="/login" method="post">
-                <div class="form-group">
-                    <label for="username">Nombre de usuario</label>
-                    <input type="text" class="form-control" id="username" name="username" placeholder="Tu nombre de usuario">
-                </div>
-                <div class="form-group">
-                    <label for="password">Contraseña</label>
-                    <input type="password" class="form-control" id="password" name="password" placeholder="Tu contraseña">
-                </div>
-                <button type="submit" class="btn btn-primary">Login</button>
-            </form>
-        </div>
-        <p><span th:text="${mensaje}"></span></p>
+    <div class="col-md-6">
+        <h1>FoodieExpress</h1>
+        <form action="/login" method="post">
+            <div class="form-group">
+                <label for="username">Nombre de usuario</label>
+                <input type="text" class="form-control" id="username" name="username" placeholder="Tu nombre de usuario">
+            </div>
+            <div class="form-group">
+                <label for="password">Contraseña</label>
+                <input type="password" class="form-control" id="password" name="password" placeholder="Tu contraseña">
+            </div>
+            <button type="submit" class="btn btn-primary">Login</button>
+        </form>
     </div>
 </div>
+
+<p class="text-center">¡Explora y disfruta de la mejor comida en FoodieExpress!</p>
+<p class="text-center">Sigue nuestro <a href="/menu">menú</a> para opciones deliciosas.</p>
+
+<footer>
+    <p>© 2023 FoodieExpress. Todos los derechos reservados.</p>
+</footer>
 </body>
 </html>
