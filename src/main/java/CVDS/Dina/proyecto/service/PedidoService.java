@@ -1,7 +1,6 @@
 package CVDS.Dina.proyecto.service;
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import CVDS.Dina.proyecto.model.Pedido;
@@ -11,7 +10,6 @@ import CVDS.Dina.proyecto.repository.PedidoRepository;
 public class PedidoService {
     private PedidoRepository pedidoRepository;
 
-    @Autowired
     public PedidoService(PedidoRepository pedidoRepository){
         this.pedidoRepository = pedidoRepository;
     }

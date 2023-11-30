@@ -3,7 +3,6 @@ package CVDS.Dina.proyecto.service;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import CVDS.Dina.proyecto.model.Alergia;
@@ -13,7 +12,7 @@ import CVDS.Dina.proyecto.repository.AlergiaRepository;
 public class AlergiaService {
 
     private AlergiaRepository alergiaRepository;
-    @Autowired
+
     public AlergiaService(AlergiaRepository alergiaRepository){
         this.alergiaRepository = alergiaRepository;
     }

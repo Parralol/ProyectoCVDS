@@ -2,7 +2,6 @@ package CVDS.Dina.proyecto.service;
 
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import CVDS.Dina.proyecto.model.Factura;
@@ -12,7 +11,6 @@ import CVDS.Dina.proyecto.repository.FacturaRepository;
 public class FacturaService {
     private FacturaRepository facturaRepository;
 
-    @Autowired
     public FacturaService(FacturaRepository facturaRepository){
         this.facturaRepository = facturaRepository;
     }
