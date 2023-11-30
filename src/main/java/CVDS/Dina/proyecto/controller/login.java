@@ -1,7 +1,10 @@
 package CVDS.Dina.proyecto.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -23,12 +26,24 @@ public class login {
     }
 
     @PostMapping("/login")
-    public String login(String username, String password) {
-        if (username.equals("admin") && password.equals("admin")) {
+    public String login(String username, String password, Model model) {
+         boolean usern = false;
+        List<Cliente> clientes = clienteService.getAllClientes();
+        for(Cliente a : clientes){
+            if (a.getNickname().equals(username) && a.getPassword().equals(password)) {
+                cliente = a;
+                usern = true;
+            }
+        }
+        if(usern){
+            model.addAttribute("cliente", cliente);
             return "redirect:/lunch";
-        } else {
+        }else{
+            model.addAttribute("mensaje", "Usuario o contraseña incorrectos");
             return "login";
         }
+            
+        
     }
     @RequestMapping("/lunch")
     public String lunch() {
