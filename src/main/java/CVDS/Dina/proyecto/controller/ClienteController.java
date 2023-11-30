@@ -39,7 +39,7 @@ public class ClienteController {
         return "creacion";
     }
     @RequestMapping(value="/crearcuenta", method = RequestMethod.POST)
-    public String asignarCuenta(String fname, String lname, String nickname,String pass, String comidaPreferida1, String comidaPreferida2, String comidaPreferida3, String tipoid, int cedula,@RequestParam("selectedAllergies") ArrayList<String> request){
+    public String asignarCuenta(String fname, String lname, String nickname,String pass, String comidaPreferida1, String comidaPreferida2, String comidaPreferida3, String tipoid, int cedula,@RequestParam("selectedAllergies") ArrayList<String> request, Model model){
         List<String> selectedList = new ArrayList<>();
         List<Alergia> allergies = new ArrayList<>();
         if (request.size() == 0) {
@@ -48,6 +48,13 @@ public class ClienteController {
             selectedList = request;
         }
         Cliente cliente = new Cliente(fname, lname);
+        List<Cliente> clientes = clienteService.getAllClientes();
+        for(Cliente a: clientes){
+            if(a.getNickname().equals(nickname)){
+                model.addAttribute("mensaje", "nombre de usuario existe");
+                return "creacion";
+            }
+        }
         cliente.setNickname(nickname);
         cliente.setPassword(pass);
         cliente.setComidaPreferidaUno(comidaPreferida1);
