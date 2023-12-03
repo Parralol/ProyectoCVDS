@@ -7,8 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import CVDS.Dina.proyecto.model.Alergia;
@@ -20,29 +19,31 @@ import CVDS.Dina.proyecto.service.ClienteService;
 public class ClienteController {
     
     private Cliente cliente;
-
+    private final String creacion = "creacion";
     //private Restaurante restaurante;
 
-    @Autowired
     ClienteService clienteService;
 
-
-    @Autowired
     AlergiaService alergiaService;
 
+    @Autowired
+    public ClienteController(ClienteService clienteService, AlergiaService alergiaService) {
+        this.clienteService = clienteService;
+        this.alergiaService = alergiaService;
+    }
     @GetMapping("/prueba")
     public String cargarDatos(){
         return "menu";
     }
     @GetMapping("/crearcuenta")
     public String crearCuenta(){
-        return "creacion";
+        return creacion;
     }
-    @RequestMapping(value="/crearcuenta", method = RequestMethod.POST)
-    public String asignarCuenta(String fname, String lname, String nickname,String pass, String comidaPreferida1, String comidaPreferida2, String comidaPreferida3, String tipoid, int cedula,@RequestParam("selectedAllergies") ArrayList<String> request, Model model){
+    @PostMapping("/crearcuenta")
+    public String asignarCuenta(String fname, String lname, String nickname,String pass, String comidaPreferida1, String comidaPreferida2, String comidaPreferida3, String tipoid, int cedula,@RequestParam("selectedAllergies") List<String> request, Model model){
         List<String> selectedList = new ArrayList<>();
         List<Alergia> allergies = new ArrayList<>();
-        if (request.size() == 0) {
+        if (request.isEmpty()) {
             selectedList = null;
         }else{
             selectedList = request;
@@ -52,7 +53,7 @@ public class ClienteController {
         for(Cliente a: clientes){
             if(a.getNickname().equals(nickname)){
                 model.addAttribute("mensaje", "nombre de usuario existe");
-                return "creacion";
+                return creacion;
             }
         }
         cliente.setNickname(nickname);
@@ -93,6 +94,6 @@ public class ClienteController {
     @GetMapping("/ComenzarCero")
     public String borrarDatos(){
         clienteService.deleteCliente(cliente.getClienteid());
-        return "creacion";
+        return creacion;
     }
 }
