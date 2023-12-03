@@ -1,4 +1,4 @@
-package CVDS.dina.proyecto.model;
+package CVDS.Dina.proyecto.model;
 
 import java.time.LocalDate;
 

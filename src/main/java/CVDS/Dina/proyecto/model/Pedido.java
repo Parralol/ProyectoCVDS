@@ -1,4 +1,4 @@
-package CVDS.dina.proyecto.model;
+package CVDS.Dina.proyecto.model;
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;

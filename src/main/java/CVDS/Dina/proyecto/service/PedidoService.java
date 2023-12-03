@@ -1,10 +1,10 @@
-package CVDS.dina.proyecto.service;
+package CVDS.Dina.proyecto.service;
 import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import CVDS.dina.proyecto.model.Pedido;
-import CVDS.dina.proyecto.repository.PedidoRepository;
+import CVDS.Dina.proyecto.model.Pedido;
+import CVDS.Dina.proyecto.repository.PedidoRepository;
 
 @Service
 public class PedidoService {
