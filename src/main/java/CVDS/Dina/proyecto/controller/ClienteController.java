@@ -65,13 +65,16 @@ public class ClienteController {
         cliente.setAlergias(allergies);
         cliente = clienteService.addCliente(cliente);
         this.cliente = cliente;
-        for(int i =0 ; i< selectedList.size(); i++ ){
-            Alergia al = new Alergia(cliente, selectedList.get(i));
-            allergies.add(al);
+        if( selectedList != null){
+            for(int i =0 ; i< selectedList.size(); i++ ){
+                Alergia al = new Alergia(cliente, selectedList.get(i));
+                allergies.add(al);
+            }
+            for(Alergia a: allergies){
+                alergiaService.addAlergia(a);
+            }
         }
-        for(Alergia a: allergies){
-            alergiaService.addAlergia(a);
-        }
+
         
         return "redirect:/confirm";
     }
