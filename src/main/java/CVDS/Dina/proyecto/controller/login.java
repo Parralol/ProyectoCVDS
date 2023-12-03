@@ -7,7 +7,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 
 import CVDS.Dina.proyecto.model.Cliente;
 import CVDS.Dina.proyecto.service.ClienteService;
@@ -45,7 +44,7 @@ public class login {
             
         
     }
-    @RequestMapping("/lunch")
+    @GetMapping("/lunch")
     public String lunch() {
         return "lunch";
     }
