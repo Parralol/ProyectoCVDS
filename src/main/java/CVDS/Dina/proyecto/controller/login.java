@@ -24,7 +24,7 @@ public class login {
         return "login";
     }
 
-    //prueba
+    //prueba 2
     @PostMapping("/login")
     public String login(String username, String password, Model model) {
          boolean usern = false;
