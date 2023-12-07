@@ -25,10 +25,11 @@ public class AlergiaService {
         alergiaRepository.saveAll(Alergia);
     }
 
-    public Alergia getAlergia(Long Alergia_id) {
-        if(alergiaRepository.findByAlergiasid(Alergia_id).size() != 0){
-            return alergiaRepository.findByAlergiasid(Alergia_id).get(0);
-        }else{
+    public Alergia getAlergia(Long alergiaId) {
+        List<Alergia> alergias = alergiaRepository.findByAlergiasid(alergiaId);
+        if (!alergias.isEmpty()) {
+            return alergias.get(0);
+        } else {
             return null;
         }
     }
