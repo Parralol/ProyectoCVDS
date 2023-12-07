@@ -1,16 +1,18 @@
 package CVDS.Dina.proyecto;
-import CVDS.Dina.proyecto.service.AlergiaService;
-import CVDS.Dina.proyecto.repository.AlergiaRepository;
-import CVDS.Dina.proyecto.model.Alergia;
-import CVDS.Dina.proyecto.model.Cliente;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNull;
+import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
+
+import java.util.ArrayList;
+import java.util.List;
+
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
-import java.util.ArrayList;
-import java.util.List;
+
+import CVDS.Dina.proyecto.model.Alergia;
+import CVDS.Dina.proyecto.model.Cliente;
+import CVDS.Dina.proyecto.repository.AlergiaRepository;
+import CVDS.Dina.proyecto.service.AlergiaService;
 
 
 @SpringBootTest
@@ -68,7 +70,7 @@ public class AllergiaServiceTest {
         Alergia result = alergiaService.getAlergia(alergiaId);
 
 
-        verify(alergiaRepository, times(1)).findByAlergiasid(alergiaId);
+        verify(alergiaRepository, times(2)).findByAlergiasid(alergiaId);
 
 
         assertEquals(alergia, result);

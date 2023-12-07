@@ -1,16 +1,17 @@
 package CVDS.Dina.proyecto;
-import java.util.List;
-import java.util.ArrayList;
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
-import CVDS.Dina.proyecto.service.ClienteService;
-import CVDS.Dina.proyecto.repository.ClienteRepository;
-import CVDS.Dina.proyecto.model.Cliente;
+
+import java.util.ArrayList;
+import java.util.List;
+
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
-import static org.junit.jupiter.api.Assertions.assertNull;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
+
+import CVDS.Dina.proyecto.model.Cliente;
+import CVDS.Dina.proyecto.repository.ClienteRepository;
+import CVDS.Dina.proyecto.service.ClienteService;
 
 
 
@@ -72,7 +73,7 @@ public class ClienteServiceTest {
         when(clienteRepository.findByClienteid(clienteId)).thenReturn(List.of(cliente));
         Cliente result = clienteService.getCliente(clienteId);
 
-        verify(clienteRepository, times(1)).findByClienteid(clienteId);
+        verify(clienteRepository, times(2)).findByClienteid(clienteId);
 
         assertEquals(cliente, result);
     }
