@@ -6,6 +6,7 @@ import CVDS.Dina.proyecto.model.Plato;
 import CVDS.Dina.proyecto.repository.PlatoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 
+
 @Service
 public class PlatoService {
     private final PlatoRepository platoRepository;
@@ -22,3 +23,5 @@ public class PlatoService {
         platoRepository.save(plato);
     }
 }
+
+

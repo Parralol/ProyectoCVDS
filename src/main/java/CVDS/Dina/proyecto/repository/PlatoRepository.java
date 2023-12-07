@@ -6,5 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface PlatoRepository extends JpaRepository<Plato, Long> {
-    public List<Plato> findByNombre(String nombre);
+    public List<Plato> findBynombrePlato(String nombre);
 }

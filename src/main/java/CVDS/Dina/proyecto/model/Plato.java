@@ -3,6 +3,7 @@ import jakarta.persistence.*;
 
 import java.util.Objects;
 
+@Entity
 public class Plato {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
