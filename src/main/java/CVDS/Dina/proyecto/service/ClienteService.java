@@ -25,10 +25,11 @@ public class ClienteService {
         clienteRepository.saveAll(Cliente);
     }
 
-    public Cliente getCliente(Long Cliente_id) {
-        if(clienteRepository.findByClienteid(Cliente_id).size() != 0){
-            return clienteRepository.findByClienteid(Cliente_id).get(0);
-        }else{
+    public Cliente getCliente(Long clienteId) {
+        List<Cliente> clientesEncontrados = clienteRepository.findByClienteid(clienteId);
+        if (!clientesEncontrados.isEmpty()) {
+            return clientesEncontrados.get(0);
+        } else {
             return null;
         }
     }

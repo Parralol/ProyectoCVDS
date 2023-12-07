@@ -55,7 +55,7 @@ public class AllergiaServiceTest {
     public void testGetAlergiaFound() {
         AlergiaService alergiaService = new AlergiaService(alergiaRepository);
 
-        Long alergiaId = 1L; 
+        Long alergiaId = 1L;
 
 
         Alergia alergia = new Alergia();
