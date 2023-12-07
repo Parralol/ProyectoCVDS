@@ -20,7 +20,6 @@ public class ClienteController {
     
     private Cliente cliente;
     private final String creacion = "creacion";
-    //private Restaurante restaurante;
 
     ClienteService clienteService;
 
