@@ -1,4 +1,4 @@
-package CVDS.Dina.proyecto.model;
+package CVDS.dina.proyecto.model;
 import jakarta.persistence.*;
 
 import java.util.Objects;

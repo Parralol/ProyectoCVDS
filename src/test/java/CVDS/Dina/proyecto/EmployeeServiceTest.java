@@ -1,4 +1,4 @@
-package CVDS.Dina.proyecto;
+package CVDS.dina.proyecto;
 
 
 import org.junit.jupiter.api.BeforeEach;

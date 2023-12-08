@@ -1,4 +1,4 @@
-package CVDS.Dina.proyecto;
+package CVDS.dina.proyecto;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
@@ -9,9 +9,9 @@ import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 
-import CVDS.Dina.proyecto.model.Cliente;
-import CVDS.Dina.proyecto.repository.ClienteRepository;
-import CVDS.Dina.proyecto.service.ClienteService;
+import CVDS.dina.proyecto.model.Cliente;
+import CVDS.dina.proyecto.repository.ClienteRepository;
+import CVDS.dina.proyecto.service.ClienteService;
 
 
 

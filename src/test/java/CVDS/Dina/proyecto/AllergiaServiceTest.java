@@ -1,4 +1,4 @@
-package CVDS.Dina.proyecto;
+package CVDS.dina.proyecto;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
@@ -9,10 +9,10 @@ import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 
-import CVDS.Dina.proyecto.model.Alergia;
-import CVDS.Dina.proyecto.model.Cliente;
-import CVDS.Dina.proyecto.repository.AlergiaRepository;
-import CVDS.Dina.proyecto.service.AlergiaService;
+import CVDS.dina.proyecto.model.Alergia;
+import CVDS.dina.proyecto.model.Cliente;
+import CVDS.dina.proyecto.repository.AlergiaRepository;
+import CVDS.dina.proyecto.service.AlergiaService;
 
 
 @SpringBootTest

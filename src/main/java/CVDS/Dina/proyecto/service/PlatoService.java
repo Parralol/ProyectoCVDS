@@ -1,10 +1,9 @@
-package CVDS.Dina.proyecto.service;
-import java.util.ArrayList;
-import java.util.List;
-import org.springframework.stereotype.Service;
-import CVDS.Dina.proyecto.model.Plato;
-import CVDS.Dina.proyecto.repository.PlatoRepository;
+package CVDS.dina.proyecto.service;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import CVDS.dina.proyecto.model.Plato;
+import CVDS.dina.proyecto.repository.PlatoRepository;
 
 
 @Service

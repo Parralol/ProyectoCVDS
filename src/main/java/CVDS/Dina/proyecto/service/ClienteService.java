@@ -1,11 +1,11 @@
-package CVDS.Dina.proyecto.service;
+package CVDS.dina.proyecto.service;
 
 import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import CVDS.Dina.proyecto.model.Cliente;
-import CVDS.Dina.proyecto.repository.ClienteRepository;
+import CVDS.dina.proyecto.model.Cliente;
+import CVDS.dina.proyecto.repository.ClienteRepository;
 
 @Service
 public class ClienteService {
