@@ -11,9 +11,9 @@ import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 
-import CVDS.dina.proyecto.model.Factura;
-import CVDS.dina.proyecto.repository.FacturaRepository;
-import CVDS.dina.proyecto.service.FacturaService;
+import cvds.dina.proyecto.model.Factura;
+import cvds.dina.proyecto.repository.FacturaRepository;
+import cvds.dina.proyecto.service.FacturaService;
 
 @SpringBootTest
 public class FacturaServiceTest {

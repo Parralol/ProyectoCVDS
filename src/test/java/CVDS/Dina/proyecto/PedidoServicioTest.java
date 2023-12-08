@@ -9,10 +9,10 @@ import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 
-import CVDS.dina.proyecto.model.Cliente;
-import CVDS.dina.proyecto.model.Pedido;
-import CVDS.dina.proyecto.repository.PedidoRepository;
-import CVDS.dina.proyecto.service.PedidoService;
+import cvds.dina.proyecto.model.Cliente;
+import cvds.dina.proyecto.model.Pedido;
+import cvds.dina.proyecto.repository.PedidoRepository;
+import cvds.dina.proyecto.service.PedidoService;
 
 @SpringBootTest
 public class PedidoServicioTest {

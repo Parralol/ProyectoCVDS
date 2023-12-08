@@ -9,9 +9,9 @@ import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 
-import CVDS.dina.proyecto.model.Cliente;
-import CVDS.dina.proyecto.repository.ClienteRepository;
-import CVDS.dina.proyecto.service.ClienteService;
+import cvds.dina.proyecto.model.Cliente;
+import cvds.dina.proyecto.repository.ClienteRepository;
+import cvds.dina.proyecto.service.ClienteService;
 
 
 

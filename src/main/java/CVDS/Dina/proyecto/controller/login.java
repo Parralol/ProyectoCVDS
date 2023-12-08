@@ -1,4 +1,4 @@
-package CVDS.dina.proyecto.controller;
+package cvds.dina.proyecto.controller;
 
 import java.util.List;
 
@@ -8,8 +8,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
-import CVDS.dina.proyecto.model.Cliente;
-import CVDS.dina.proyecto.service.ClienteService;
+import cvds.dina.proyecto.model.Cliente;
+import cvds.dina.proyecto.service.ClienteService;
 
 @Controller
 public class login {

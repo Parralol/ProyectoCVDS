@@ -1,4 +1,4 @@
-package CVDS.dina.proyecto.controller;
+package cvds.dina.proyecto.controller;
 import java.util.List;
 
 import org.springframework.http.ResponseEntity;
@@ -6,8 +6,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
-import CVDS.dina.proyecto.model.Plato;
-import CVDS.dina.proyecto.service.PlatoService;
+import cvds.dina.proyecto.model.Plato;
+import cvds.dina.proyecto.service.PlatoService;
 
 @Controller
 public class PlatoController {

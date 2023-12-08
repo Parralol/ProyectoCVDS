@@ -1,11 +1,11 @@
-package CVDS.dina.proyecto.service;
+package cvds.dina.proyecto.service;
 
 import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import CVDS.dina.proyecto.model.Factura;
-import CVDS.dina.proyecto.repository.FacturaRepository;
+import cvds.dina.proyecto.model.Factura;
+import cvds.dina.proyecto.repository.FacturaRepository;
 
 @Service
 public class FacturaService {

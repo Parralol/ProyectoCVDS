@@ -1,11 +1,11 @@
-package CVDS.dina.proyecto.repository;
+package cvds.dina.proyecto.repository;
 
 import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import CVDS.dina.proyecto.model.Pedido;
+import cvds.dina.proyecto.model.Pedido;
 
 @Repository
 public interface PedidoRepository extends JpaRepository<Pedido, Long> {

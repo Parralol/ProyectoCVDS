@@ -1,12 +1,12 @@
-package CVDS.dina.proyecto.service;
+package cvds.dina.proyecto.service;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import CVDS.dina.proyecto.model.Alergia;
-import CVDS.dina.proyecto.repository.AlergiaRepository;
+import cvds.dina.proyecto.model.Alergia;
+import cvds.dina.proyecto.repository.AlergiaRepository;
 
 @Service
 public class AlergiaService {

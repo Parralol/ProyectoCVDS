@@ -9,10 +9,10 @@ import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 
-import CVDS.dina.proyecto.model.Alergia;
-import CVDS.dina.proyecto.model.Cliente;
-import CVDS.dina.proyecto.repository.AlergiaRepository;
-import CVDS.dina.proyecto.service.AlergiaService;
+import cvds.dina.proyecto.model.Alergia;
+import cvds.dina.proyecto.model.Cliente;
+import cvds.dina.proyecto.repository.AlergiaRepository;
+import cvds.dina.proyecto.service.AlergiaService;
 
 
 @SpringBootTest
