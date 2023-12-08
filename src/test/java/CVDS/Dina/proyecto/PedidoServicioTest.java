@@ -1,19 +1,18 @@
-package CVDS.Dina.proyecto;
+package CVDS.dina.proyecto;
+import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
+
+import java.util.ArrayList;
+import java.util.List;
+
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
-import java.util.Collections;
-import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.List;
-import CVDS.Dina.proyecto.service.PedidoService;
-import CVDS.Dina.proyecto.repository.PedidoRepository;
-import CVDS.Dina.proyecto.model.Pedido;
-import CVDS.Dina.proyecto.model.Cliente;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNull;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
+
+import CVDS.dina.proyecto.model.Cliente;
+import CVDS.dina.proyecto.model.Pedido;
+import CVDS.dina.proyecto.repository.PedidoRepository;
+import CVDS.dina.proyecto.service.PedidoService;
 
 @SpringBootTest
 public class PedidoServicioTest {

@@ -1,18 +1,19 @@
-package CVDS.Dina.proyecto;
+package CVDS.dina.proyecto;
+import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
+
+import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
-import java.util.Collections;
-import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.List;
-import CVDS.Dina.proyecto.service.FacturaService;
-import CVDS.Dina.proyecto.repository.FacturaRepository;
-import CVDS.Dina.proyecto.model.Factura;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNull;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
+
+import CVDS.dina.proyecto.model.Factura;
+import CVDS.dina.proyecto.repository.FacturaRepository;
+import CVDS.dina.proyecto.service.FacturaService;
 
 @SpringBootTest
 public class FacturaServiceTest {
