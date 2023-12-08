@@ -1,4 +1,4 @@
-package CVDS.dina.proyecto;
+package cvds.dina.proyecto;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
