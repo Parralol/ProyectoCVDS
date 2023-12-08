@@ -47,7 +47,7 @@ public class ClienteController {
         }else{
             selectedList = request;
         }
-        Cliente cliente = new Cliente(fname, lname);
+        Cliente cliente1 = new Cliente(fname, lname);
         List<Cliente> clientes = clienteService.getAllClientes();
         for(Cliente a: clientes){
             if(a.getNickname().equals(nickname)){
@@ -64,7 +64,7 @@ public class ClienteController {
         cliente.setCedula(cedula);
         cliente.setAlergias(allergies);
         cliente = clienteService.addCliente(cliente);
-        this.cliente = cliente;
+        this.cliente = cliente1;
         if( selectedList != null){
             for(int i =0 ; i< selectedList.size(); i++ ){
                 Alergia al = new Alergia(cliente, selectedList.get(i));
