@@ -19,7 +19,8 @@ public class Plato {
 
     private String descripcion;
 
-    public Plato(){
+    public Plato() {
+        //Constructor vacio
     }
 
     //getters y setters
