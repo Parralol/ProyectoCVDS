@@ -3,7 +3,6 @@ package cvds.dina.proyecto.controller;
 import java.util.ArrayList;
 import java.util.List;
 
-
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -86,7 +85,7 @@ public class ClienteController {
     @GetMapping("/CrearCliente")
     public String subirDatos( ) {
 
-        return "/principal1";
+        return "principal1";
     }
 
     @GetMapping("/ComenzarCero")
