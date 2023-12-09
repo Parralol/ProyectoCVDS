@@ -15,12 +15,12 @@ import cvds.dina.proyecto.service.ClienteService;
 public class Login {
 
     private Cliente cliente;
-
+    private final ClienteService clienteService;
     @Autowired
-    public Login(Cliente cliente){
-        this.cliente = cliente;
+    public Login(ClienteService clienteService){
+        this.clienteService = clienteService;
     }
-    ClienteService clienteService;
+    
 
     @GetMapping("/login")
     public String login() {
