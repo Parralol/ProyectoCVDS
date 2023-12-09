@@ -14,17 +14,17 @@ public class PedidoService {
         this.pedidoRepository = pedidoRepository;
     }
     
-    public Pedido addPedido(Pedido Pedido) {
-        return pedidoRepository.save(Pedido);
+    public Pedido addPedido(Pedido pedido) {
+        return pedidoRepository.save(pedido);
     }
     
-    public void save(List<Pedido> Pedido) {
-        pedidoRepository.saveAll(Pedido);
+    public void save(List<Pedido> pedido) {
+        pedidoRepository.saveAll(pedido);
     }
 
-    public Pedido getPedido(Long Pedidoid) {
-        if(pedidoRepository.findByPedidoId(Pedidoid).size() != 0){
-            return pedidoRepository.findByPedidoId(Pedidoid).get(0);
+    public Pedido getPedido(Long pedidoid) {
+        if(pedidoRepository.findByPedidoId(pedidoid).isEmpty()){
+            return pedidoRepository.findByPedidoId(pedidoid).get(0);
         }else{
             return null;
         }
@@ -34,16 +34,16 @@ public class PedidoService {
         return pedidoRepository.findAll();
     }
 
-    public Pedido updatePedido(Pedido Pedido) {
-        if (pedidoRepository.findByPedidoId(Pedido.getpedidoId()).size() == 0) {
-            return pedidoRepository.save(Pedido);
+    public Pedido updatePedido(Pedido pedido) {
+        if (pedidoRepository.findByPedidoId(pedido.getpedidoId()).isEmpty()) {
+            return pedidoRepository.save(pedido);
         }
 
         return null;
     }
 
-    public void deletePedido(Long Pedidoid) {
-        pedidoRepository.deleteById(Pedidoid);
+    public void deletePedido(Long pedidoid) {
+        pedidoRepository.deleteById(pedidoid);
     }
     public List<Pedido> getAll(){
         return pedidoRepository.findAll();

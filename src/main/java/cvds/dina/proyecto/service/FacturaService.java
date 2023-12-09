@@ -15,17 +15,17 @@ public class FacturaService {
         this.facturaRepository = facturaRepository;
     }
     
-    public Factura addFactura(Factura Factura) {
-        return facturaRepository.save(Factura);
+    public Factura addFactura(Factura factura) {
+        return facturaRepository.save(factura);
     }
     
-    public void save(List<Factura> Factura) {
-        facturaRepository.saveAll(Factura);
+    public void save(List<Factura> factura) {
+        facturaRepository.saveAll(factura);
     }
 
-    public Factura getFactura(Long Facturaid) {
-        if(facturaRepository.findByid(Facturaid).size() != 0){
-            return facturaRepository.findByid(Facturaid).get(0);
+    public Factura getFactura(Long facturaid) {
+        if(facturaRepository.findByid(facturaid).isEmpty()){
+            return facturaRepository.findByid(facturaid).get(0);
         }else{
             return null;
         }
@@ -35,16 +35,16 @@ public class FacturaService {
         return facturaRepository.findAll();
     }
 
-    public Factura updateFactura(Factura Factura) {
-        if (facturaRepository.findByid(Factura.getId()).size() == 0) {
-            return facturaRepository.save(Factura);
+    public Factura updateFactura(Factura factura) {
+        if (facturaRepository.findByid(factura.getId()).isEmpty()) {
+            return facturaRepository.save(factura);
         }
 
         return null;
     }
 
-    public void deleteFactura(Long Facturaid) {
-        facturaRepository.deleteById(Facturaid);
+    public void deleteFactura(Long facturaid) {
+        facturaRepository.deleteById(facturaid);
     }
     public List<Factura> getAll(){
         return facturaRepository.findAll();

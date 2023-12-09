@@ -15,17 +15,17 @@ public class ClienteService {
         this.clienteRepository = clienteRepository;
     }
     
-    public Cliente addCliente(Cliente Cliente) {
-        return clienteRepository.save(Cliente);
+    public Cliente addCliente(Cliente cliente) {
+        return clienteRepository.save(cliente);
     }
     
-    public void save(List<Cliente> Cliente) {
-        clienteRepository.saveAll(Cliente);
+    public void save(List<Cliente> cliente) {
+        clienteRepository.saveAll(cliente);
     }
 
-    public Cliente getCliente(Long Clienteid) {
-        if(clienteRepository.findByClienteid(Clienteid).size() != 0){
-            return clienteRepository.findByClienteid(Clienteid).get(0);
+    public Cliente getCliente(Long clienteid) {
+        if(clienteRepository.findByClienteid(clienteid).isEmpty()){
+            return clienteRepository.findByClienteid(clienteid).get(0);
         }else{
             return null;
         }
@@ -36,15 +36,15 @@ public class ClienteService {
     }
 
     public Cliente updateCliente(Cliente cliente) {
-        if (clienteRepository.findByClienteid(cliente.getClienteid()).size() == 0) {
+        if (clienteRepository.findByClienteid(cliente.getClienteid()).isEmpty()) {
             return clienteRepository.save(cliente);
         }
 
         return null;
     }
 
-    public void deleteCliente(Long Clienteid) {
-        clienteRepository.deleteById(Clienteid);
+    public void deleteCliente(Long clienteid) {
+        clienteRepository.deleteById(clienteid);
     }
     public List<Cliente> getAll(){
         return clienteRepository.findAll();

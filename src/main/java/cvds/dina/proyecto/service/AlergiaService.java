@@ -1,6 +1,5 @@
 package cvds.dina.proyecto.service;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.stereotype.Service;
@@ -17,17 +16,17 @@ public class AlergiaService {
         this.alergiaRepository = alergiaRepository;
     }
     
-    public Alergia addAlergia(Alergia Alergia) {
-        return alergiaRepository.save(Alergia);
+    public Alergia addAlergia(Alergia alergia) {
+        return alergiaRepository.save(alergia);
     }
     
-    public void save(List<Alergia> Alergia) {
-        alergiaRepository.saveAll(Alergia);
+    public void save(List<Alergia> alergia) {
+        alergiaRepository.saveAll(alergia);
     }
 
-    public Alergia getAlergia(Long Alergiaid) {
-        if(alergiaRepository.findByAlergiasid(Alergiaid).size() != 0){
-            return alergiaRepository.findByAlergiasid(Alergiaid).get(0);
+    public Alergia getAlergia(Long alergiaid) {
+        if(alergiaRepository.findByAlergiasid(alergiaid).isEmpty()){
+            return alergiaRepository.findByAlergiasid(alergiaid).get(0);
         }else{
             return null;
         }
@@ -37,21 +36,21 @@ public class AlergiaService {
         return alergiaRepository.findAll();
     }
 
-    public Alergia updateAlergia(Alergia Alergia) {
-        if (alergiaRepository.findByAlergiasid(Alergia.getAlergiasid()).size() == 0) {
-            return alergiaRepository.save(Alergia);
+    public Alergia updateAlergia(Alergia alergia) {
+        if (alergiaRepository.findByAlergiasid(alergia.getAlergiasid()).isEmpty()) {
+            return alergiaRepository.save(alergia);
         }
 
         return null;
     }
 
-    public void deleteAlergia(Long Alergiaid) {
-        alergiaRepository.deleteById(Alergiaid);
+    public void deleteAlergia(Long alergiaid) {
+        alergiaRepository.deleteById(alergiaid);
     }
     public List<Alergia> getAll(){
         return alergiaRepository.findAll();
     }
-    public List<Alergia> getAllById(ArrayList<Long> id){
+    public List<Alergia> getAllById(List<Long> id){
         return alergiaRepository.findAllById(id);
     }
 

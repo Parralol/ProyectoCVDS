@@ -2,7 +2,6 @@ package cvds.dina.proyecto.controller;
 
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,7 +15,8 @@ public class Login {
 
     private Cliente cliente;
     private final ClienteService clienteService;
-    @Autowired
+
+  
     public Login(ClienteService clienteService){
         this.clienteService = clienteService;
     }
