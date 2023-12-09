@@ -19,7 +19,7 @@ public class PedidoServicioTest {
     @MockBean
     private PedidoRepository pedidoRepository;
     @Test
-    public void testAddPedido() {
+    void testAddPedido() {
         PedidoService pedidoService = new PedidoService(pedidoRepository);
         Cliente cliente = new Cliente ("gabriel", "silva");
         Pedido pedido = new Pedido(1L,cliente,"Harvies","arroz" ,20000);
@@ -31,7 +31,7 @@ public class PedidoServicioTest {
     }
 
     @Test
-    public void testSavePedidos() {
+    void testSavePedidos() {
         PedidoService pedidoService = new PedidoService(pedidoRepository);
         List<Pedido> pedidos = new ArrayList<>();
         Cliente cliente1 = new Cliente ("gabriel", "silva");
@@ -44,7 +44,7 @@ public class PedidoServicioTest {
     }
 
     @Test
-    public void testGetPedidoFound() {
+    void testGetPedidoFound() {
         PedidoService pedidoService = new PedidoService(pedidoRepository);
         Cliente cliente = new Cliente ("ramon", "valdes");
         Long pedidoId = 1L;
@@ -58,7 +58,7 @@ public class PedidoServicioTest {
     }
 
     @Test
-    public void testGetPedidoNotFound() {
+    void testGetPedidoNotFound() {
         PedidoService pedidoService = new PedidoService(pedidoRepository);
 
         Long pedidoId = 1L;
@@ -74,7 +74,7 @@ public class PedidoServicioTest {
     }
 
     @Test
-    public void testUpdatePedidoWhenFound() {
+    void testUpdatePedidoWhenFound() {
         PedidoService pedidoService = new PedidoService(pedidoRepository);
         Cliente cliente = new Cliente ("shahad", "lozada");
         Pedido pedido = new Pedido(1L,cliente,"k2","arroz y papas" ,34000);
@@ -88,7 +88,7 @@ public class PedidoServicioTest {
     }
 
     @Test
-    public void testDeletePedido() {
+    void testDeletePedido() {
         PedidoService pedidoService = new PedidoService(pedidoRepository);
         Long pedidoIdToDelete = 1L; // ID del pedido a eliminar
         pedidoService.deletePedido(pedidoIdToDelete);

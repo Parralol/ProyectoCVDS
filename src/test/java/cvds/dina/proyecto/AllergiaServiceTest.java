@@ -21,7 +21,7 @@ public class AllergiaServiceTest {
     private AlergiaRepository alergiaRepository;
 
     @Test
-    public void testAddAlergia() {
+    void testAddAlergia() {
         AlergiaService alergiaService = new AlergiaService(alergiaRepository);
 
         Cliente cliente = new Cliente();
@@ -43,7 +43,7 @@ public class AllergiaServiceTest {
     }
 
     @Test
-    public void testSave() {
+    void testSave() {
         AlergiaService alergiaService = new AlergiaService(alergiaRepository);
 
         List<Alergia> alergias = new ArrayList<>();
@@ -54,7 +54,7 @@ public class AllergiaServiceTest {
     }
 
     @Test
-    public void testGetAlergiaFound() {
+    void testGetAlergiaFound() {
         AlergiaService alergiaService = new AlergiaService(alergiaRepository);
 
         Long alergiaId = 1L;
@@ -77,7 +77,7 @@ public class AllergiaServiceTest {
     }
 
     @Test
-    public void testGetAlergiaNotFound() {
+    void testGetAlergiaNotFound() {
         AlergiaService alergiaService = new AlergiaService(alergiaRepository);
 
         Long alergiaId = 2L;
@@ -94,7 +94,7 @@ public class AllergiaServiceTest {
     }
 
     @Test
-    public void testUpdateAlergiaNewAlergia() {
+    void testUpdateAlergiaNewAlergia() {
         AlergiaService alergiaService = new AlergiaService(alergiaRepository);
 
 
@@ -117,7 +117,7 @@ public class AllergiaServiceTest {
     }
 
     @Test
-    public void testUpdateAlergiaExistingAlergia() {
+    void testUpdateAlergiaExistingAlergia() {
         AlergiaService alergiaService = new AlergiaService(alergiaRepository);
 
 
@@ -136,7 +136,7 @@ public class AllergiaServiceTest {
     }
 
     @Test
-    public void testDeleteAlergia() {
+    void testDeleteAlergia() {
         AlergiaService alergiaService = new AlergiaService(alergiaRepository);
 
         Long alergiaId = 1L;
@@ -148,7 +148,7 @@ public class AllergiaServiceTest {
     }
 
     @Test
-    public void testGetAll() {
+    void testGetAll() {
         AlergiaService alergiaService = new AlergiaService(alergiaRepository);
 
 
@@ -167,7 +167,7 @@ public class AllergiaServiceTest {
     }
 
     @Test
-    public void testGetAllById() {
+    void testGetAllById() {
         AlergiaService alergiaService = new AlergiaService(alergiaRepository);
 
         ArrayList<Long> ids = new ArrayList<>();

@@ -21,7 +21,7 @@ public class FacturaServiceTest {
     private FacturaRepository facturaRepository;
 
     @Test
-    public void testAddFactura() {
+    void testAddFactura() {
         FacturaService facturaService = new FacturaService(facturaRepository);
 
         Factura factura = new Factura(1L, 12000, "K1", LocalDate.now());
@@ -39,7 +39,7 @@ public class FacturaServiceTest {
     }
 
     @Test
-    public void testSaveFacturas() {
+    void testSaveFacturas() {
         FacturaService facturaService = new FacturaService(facturaRepository);
 
         List<Factura> facturas = new ArrayList<>();
@@ -53,7 +53,7 @@ public class FacturaServiceTest {
     }
 
     @Test
-    public void testGetFacturaFound() {
+    void testGetFacturaFound() {
 
         FacturaService facturaService = new FacturaService(facturaRepository);
         Long facturaId = 1L;
@@ -68,7 +68,7 @@ public class FacturaServiceTest {
     }
 
     @Test
-    public void testGetFacturaNotFound() {
+    void testGetFacturaNotFound() {
         FacturaService facturaService = new FacturaService(facturaRepository);
         Long facturaId = 2L;
         when(facturaRepository.findByid(facturaId)).thenReturn(Collections.emptyList());
@@ -78,7 +78,7 @@ public class FacturaServiceTest {
     }
 
     @Test
-    public void testUpdateFacturaWhenNotExists() {
+    void testUpdateFacturaWhenNotExists() {
         FacturaService facturaService = new FacturaService(facturaRepository);
 
         Factura factura = new Factura(1L, 100000, "k1", LocalDate.now());
@@ -94,7 +94,7 @@ public class FacturaServiceTest {
     }
 
     @Test
-    public void testUpdateFacturaWhenExists() {
+    void testUpdateFacturaWhenExists() {
         FacturaService facturaService = new FacturaService(facturaRepository);
         Factura factura = new Factura(2L, 20000, "harvies", LocalDate.now());
         when(facturaRepository.findByid(factura.getId())).thenReturn(Collections.singletonList(factura));
@@ -104,7 +104,7 @@ public class FacturaServiceTest {
     }
 
     @Test
-    public void testDeleteFactura() {
+    void testDeleteFactura() {
         FacturaService facturaService = new FacturaService(facturaRepository);
         Long facturaIdToDelete = 1L;
         facturaService.deleteFactura(facturaIdToDelete);
@@ -112,7 +112,7 @@ public class FacturaServiceTest {
     }
 
     @Test
-    public void testGetAllFacturas() {
+    void testGetAllFacturas() {
         FacturaService facturaService = new FacturaService(facturaRepository);
         List<Factura> facturas = new ArrayList<>();
         facturas.add(new Factura(2L, 20000, "harvies", LocalDate.now()));

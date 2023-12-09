@@ -21,7 +21,7 @@ public class ClienteServiceTest {
     private ClienteRepository clienteRepository;
 
     @Test
-    public void testAddClienteWithAllAttributes() {
+    void testAddClienteWithAllAttributes() {
         ClienteService clienteService = new ClienteService(clienteRepository);
 
 
@@ -47,7 +47,7 @@ public class ClienteServiceTest {
     }
 
     @Test
-    public void testSaveAllClientes() {
+    void testSaveAllClientes() {
         ClienteService clienteService = new ClienteService(clienteRepository);
 
 
@@ -63,7 +63,7 @@ public class ClienteServiceTest {
         verify(clienteRepository, times(1)).saveAll(clientes);
     }
     @Test
-    public void testGetClienteFound() {
+    void testGetClienteFound() {
         ClienteService clienteService = new ClienteService(clienteRepository);
         Long clienteId = 1L;
 
@@ -79,7 +79,7 @@ public class ClienteServiceTest {
     }
 
     @Test
-    public void testGetClienteNotFound() {
+    void testGetClienteNotFound() {
         ClienteService clienteService = new ClienteService(clienteRepository);
 
         Long clienteId = 2L;
@@ -93,7 +93,7 @@ public class ClienteServiceTest {
     }
 
     @Test
-    public void testGetAllClientes() {
+    void testGetAllClientes() {
         ClienteService clienteService = new ClienteService(clienteRepository);
 
 
@@ -112,7 +112,7 @@ public class ClienteServiceTest {
 
 
     @Test
-    public void testUpdateClienteWhenNotExists() {
+    void testUpdateClienteWhenNotExists() {
         ClienteService clienteService = new ClienteService(clienteRepository);
 
         Cliente cliente = new Cliente("John", "Doe");
@@ -133,7 +133,7 @@ public class ClienteServiceTest {
     }
 
     @Test
-    public void testUpdateClienteWhenExists() {
+    void testUpdateClienteWhenExists() {
         ClienteService clienteService = new ClienteService(clienteRepository);
 
 
@@ -152,7 +152,7 @@ public class ClienteServiceTest {
     }
 
     @Test
-    public void testDeleteCliente() {
+    void testDeleteCliente() {
         ClienteService clienteService = new ClienteService(clienteRepository);
 
         Long clienteIdToDelete = 1L;
@@ -164,7 +164,7 @@ public class ClienteServiceTest {
     }
 
     @Test
-    public void testGetAll() {
+    void testGetAll() {
         ClienteService clienteService = new ClienteService(clienteRepository);
 
 
