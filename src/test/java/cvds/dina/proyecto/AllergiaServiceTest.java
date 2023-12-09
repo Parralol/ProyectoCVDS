@@ -16,7 +16,7 @@ import cvds.dina.proyecto.service.AlergiaService;
 
 
 @SpringBootTest
-public class AllergiaServiceTest {
+class AllergiaServiceTest {
     @MockBean
     private AlergiaRepository alergiaRepository;
 

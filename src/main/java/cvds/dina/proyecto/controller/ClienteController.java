@@ -19,7 +19,7 @@ import cvds.dina.proyecto.service.ClienteService;
 public class ClienteController {
     
     private Cliente cliente;
-    private final String creacion = "creacion";
+    private static final String creacion = "creacion";
 
     ClienteService clienteService;
 
@@ -55,15 +55,15 @@ public class ClienteController {
                 return creacion;
             }
         }
-        cliente.setNickname(nickname);
-        cliente.setPassword(pass);
-        cliente.setComidaPreferidaUno(comidaPreferida1);
-        cliente.setComidaPreferidaDos(comidaPreferida2);
-        cliente.setComidaPreferidaTres(comidaPreferida3);
-        cliente.setTipoId(tipoid);
-        cliente.setCedula(cedula);
-        cliente.setAlergias(allergies);
-        cliente = clienteService.addCliente(cliente);
+        cliente1.setNickname(nickname);
+        cliente1.setPassword(pass);
+        cliente1.setComidaPreferidaUno(comidaPreferida1);
+        cliente1.setComidaPreferidaDos(comidaPreferida2);
+        cliente1.setComidaPreferidaTres(comidaPreferida3);
+        cliente1.setTipoId(tipoid);
+        cliente1.setCedula(cedula);
+        cliente1.setAlergias(allergies);
+        cliente1 = clienteService.addCliente(cliente1);
         this.cliente = cliente1;
         if( selectedList != null){
             for(int i =0 ; i< selectedList.size(); i++ ){

@@ -16,7 +16,7 @@ import cvds.dina.proyecto.service.ClienteService;
 
 
 @SpringBootTest
-public class ClienteServiceTest {
+class ClienteServiceTest {
     @MockBean
     private ClienteRepository clienteRepository;
 

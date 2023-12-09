@@ -22,9 +22,9 @@ public class PedidoService {
         pedidoRepository.saveAll(Pedido);
     }
 
-    public Pedido getPedido(Long Pedido_id) {
-        if(pedidoRepository.findByPedidoId(Pedido_id).size() != 0){
-            return pedidoRepository.findByPedidoId(Pedido_id).get(0);
+    public Pedido getPedido(Long Pedidoid) {
+        if(pedidoRepository.findByPedidoId(Pedidoid).size() != 0){
+            return pedidoRepository.findByPedidoId(Pedidoid).get(0);
         }else{
             return null;
         }
@@ -42,8 +42,8 @@ public class PedidoService {
         return null;
     }
 
-    public void deletePedido(Long Pedido_id) {
-        pedidoRepository.deleteById(Pedido_id);
+    public void deletePedido(Long Pedidoid) {
+        pedidoRepository.deleteById(Pedidoid);
     }
     public List<Pedido> getAll(){
         return pedidoRepository.findAll();

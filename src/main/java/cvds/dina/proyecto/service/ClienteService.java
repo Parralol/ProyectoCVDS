@@ -23,9 +23,9 @@ public class ClienteService {
         clienteRepository.saveAll(Cliente);
     }
 
-    public Cliente getCliente(Long Cliente_id) {
-        if(clienteRepository.findByClienteid(Cliente_id).size() != 0){
-            return clienteRepository.findByClienteid(Cliente_id).get(0);
+    public Cliente getCliente(Long Clienteid) {
+        if(clienteRepository.findByClienteid(Clienteid).size() != 0){
+            return clienteRepository.findByClienteid(Clienteid).get(0);
         }else{
             return null;
         }
@@ -43,8 +43,8 @@ public class ClienteService {
         return null;
     }
 
-    public void deleteCliente(Long Cliente_id) {
-        clienteRepository.deleteById(Cliente_id);
+    public void deleteCliente(Long Clienteid) {
+        clienteRepository.deleteById(Clienteid);
     }
     public List<Cliente> getAll(){
         return clienteRepository.findAll();

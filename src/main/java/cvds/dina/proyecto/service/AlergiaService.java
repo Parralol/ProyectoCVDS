@@ -25,9 +25,9 @@ public class AlergiaService {
         alergiaRepository.saveAll(Alergia);
     }
 
-    public Alergia getAlergia(Long Alergia_id) {
-        if(alergiaRepository.findByAlergiasid(Alergia_id).size() != 0){
-            return alergiaRepository.findByAlergiasid(Alergia_id).get(0);
+    public Alergia getAlergia(Long Alergiaid) {
+        if(alergiaRepository.findByAlergiasid(Alergiaid).size() != 0){
+            return alergiaRepository.findByAlergiasid(Alergiaid).get(0);
         }else{
             return null;
         }
@@ -45,8 +45,8 @@ public class AlergiaService {
         return null;
     }
 
-    public void deleteAlergia(Long Alergia_id) {
-        alergiaRepository.deleteById(Alergia_id);
+    public void deleteAlergia(Long Alergiaid) {
+        alergiaRepository.deleteById(Alergiaid);
     }
     public List<Alergia> getAll(){
         return alergiaRepository.findAll();

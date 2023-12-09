@@ -16,7 +16,7 @@ import cvds.dina.proyecto.repository.FacturaRepository;
 import cvds.dina.proyecto.service.FacturaService;
 
 @SpringBootTest
-public class FacturaServiceTest {
+class FacturaServiceTest {
     @MockBean
     private FacturaRepository facturaRepository;
 

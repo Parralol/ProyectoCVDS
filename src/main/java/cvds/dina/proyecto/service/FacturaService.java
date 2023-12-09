@@ -23,9 +23,9 @@ public class FacturaService {
         facturaRepository.saveAll(Factura);
     }
 
-    public Factura getFactura(Long Factura_id) {
-        if(facturaRepository.findByid(Factura_id).size() != 0){
-            return facturaRepository.findByid(Factura_id).get(0);
+    public Factura getFactura(Long Facturaid) {
+        if(facturaRepository.findByid(Facturaid).size() != 0){
+            return facturaRepository.findByid(Facturaid).get(0);
         }else{
             return null;
         }
@@ -43,8 +43,8 @@ public class FacturaService {
         return null;
     }
 
-    public void deleteFactura(Long Factura_id) {
-        facturaRepository.deleteById(Factura_id);
+    public void deleteFactura(Long Facturaid) {
+        facturaRepository.deleteById(Facturaid);
     }
     public List<Factura> getAll(){
         return facturaRepository.findAll();

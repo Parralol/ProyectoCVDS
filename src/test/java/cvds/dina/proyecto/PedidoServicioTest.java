@@ -15,7 +15,7 @@ import cvds.dina.proyecto.repository.PedidoRepository;
 import cvds.dina.proyecto.service.PedidoService;
 
 @SpringBootTest
-public class PedidoServicioTest {
+class PedidoServicioTest {
     @MockBean
     private PedidoRepository pedidoRepository;
     @Test
