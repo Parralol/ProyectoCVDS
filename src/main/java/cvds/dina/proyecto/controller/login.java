@@ -12,11 +12,14 @@ import cvds.dina.proyecto.model.Cliente;
 import cvds.dina.proyecto.service.ClienteService;
 
 @Controller
-public class login {
+public class Login {
 
     private Cliente cliente;
 
     @Autowired
+    public Login(Cliente cliente){
+        this.cliente = cliente;
+    }
     ClienteService clienteService;
 
     @GetMapping("/login")
