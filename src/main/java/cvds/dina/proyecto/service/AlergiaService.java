@@ -25,7 +25,7 @@ public class AlergiaService {
     }
 
     public Alergia getAlergia(Long alergiaid) {
-        if(alergiaRepository.findByAlergiasid(alergiaid).isEmpty()){
+        if(!alergiaRepository.findByAlergiasid(alergiaid).isEmpty()){
             return alergiaRepository.findByAlergiasid(alergiaid).get(0);
         }else{
             return null;

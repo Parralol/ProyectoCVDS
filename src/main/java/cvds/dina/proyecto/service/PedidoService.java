@@ -23,7 +23,7 @@ public class PedidoService {
     }
 
     public Pedido getPedido(Long pedidoid) {
-        if(pedidoRepository.findByPedidoId(pedidoid).isEmpty()){
+        if(!pedidoRepository.findByPedidoId(pedidoid).isEmpty()){
             return pedidoRepository.findByPedidoId(pedidoid).get(0);
         }else{
             return null;

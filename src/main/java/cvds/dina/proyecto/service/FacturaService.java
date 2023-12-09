@@ -24,7 +24,7 @@ public class FacturaService {
     }
 
     public Factura getFactura(Long facturaid) {
-        if(facturaRepository.findByid(facturaid).isEmpty()){
+        if(!facturaRepository.findByid(facturaid).isEmpty()){
             return facturaRepository.findByid(facturaid).get(0);
         }else{
             return null;

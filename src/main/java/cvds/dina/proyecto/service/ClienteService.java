@@ -24,7 +24,7 @@ public class ClienteService {
     }
 
     public Cliente getCliente(Long clienteid) {
-        if(clienteRepository.findByClienteid(clienteid).isEmpty()){
+        if(!clienteRepository.findByClienteid(clienteid).isEmpty()){
             return clienteRepository.findByClienteid(clienteid).get(0);
         }else{
             return null;
